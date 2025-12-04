@@ -1,7 +1,7 @@
 # did:ethr re-specification
 ## Motivation & Gap Analysis
 
-Based on our audit of the current ecosystem, we have identified three critical flaws:
+Based on our audit of the current ecosystem, we have identified several critical flaws:
 
 * current did:ethr relies heavily on ERC-1056 event logs for state management and document resulotion, this leads to 1. inconsistent resolver behavior across chains/clients and Non-deterministic DID resolution, 2. migrarion to newer versions of ERC-1056 contracts almost impossible as upgrades require resolvers to track multiple registries indefinitely and 3. not being able to efficiently verify historical state or support light-client nodes.
 
