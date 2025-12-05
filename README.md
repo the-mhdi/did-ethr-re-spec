@@ -19,7 +19,7 @@ The method specific identifier is represented as the HEX-encoded secp256k1 publi
       ethr-did = "did:ethr:" ethr-specific-identifier
       ethr-specific-identifier = [ ethr-blockchain ":" ethr-networkChainID ] ethereum-address / public-key-hex
       ethr-blockchain = "eth" /"eip155" / "polygon" / "sonic" 
-      ethr-networkChainID = "mainnet" / "sepolia" / "test" / 1 / 137 
+      ethr-networkChainID = "main" / "sepolia" / "test" / "amoy"/ 1 / 137 
       ethereum-address = "0x" 40*HEXDIG
       public-key-hex = "0x" 66*HEXDIG
 
@@ -28,12 +28,13 @@ Note, if no ethr-blockchain was specified, it is assumed that the DID is anchore
 
     did:ethr:0xb9c5714089478a327f09197987f16f9e5d936e8a
     did:ethr:sepolia:0xb9c5714089478a327f09197987f16f9e5d936e8a
-    did:ethr:polygon:main:0xb9c5714089478a327f09197987f16f9e5d936e8a
-    did:ethr:
+    did:ethr:polygon:amoy:0xb9c5714089478a327f09197987f16f9e5d936e8a
+    did:ethr:sonic:main:0xb9c5714089478a327f09197987f16f9e5d936e8a
 
 ## DID Document
 Example of DID document of an un-registered identity `did:ethr:0xb9c5714089478a327f09197987f16f9e5d936e8a`:
 
+  ```json
     {
     "@context": [
     "https://www.w3.org/ns/did/v1",
@@ -69,13 +70,13 @@ Example of DID document of an un-registered identity `did:ethr:0xb9c5714089478a3
             "replacedAtBlock":"0"
     }
     "IssuanceState":{  
-    //revocation tree 
-            "issuanceStateRoot":"TBD",
+     
+            "issuanceStateRoot":"TBD/revocation tree root",
             "previousIssuanceRoot":"",
             "createdAtBlock":"0",
             "replacedAtBlock":"0"
     }
     }
-
+```
 ## CRUD Operation Definitions
       
