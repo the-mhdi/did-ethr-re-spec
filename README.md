@@ -55,6 +55,8 @@ Example of DID document of an un-registered identity `did:ethr:0xb9c5714089478a3
     "assertionMethod": [
     "did:ethr:0xb9c5714089478a327f09197987f16f9e5d936e8a#controller"
     ],
+
+
     "states" : {
     "publicState":{
             "gateway" :"contract address or ipfs gaveway/cid or Rest API"
@@ -79,4 +81,11 @@ Example of DID document of an un-registered identity `did:ethr:0xb9c5714089478a3
     }
 ```
 ## CRUD Operation Definitions
-      
+
+  ### Create (Register)
+  
+  ### Resolve(Read)
+  
+  ### Updata
+  
+  ### Delete(Deactive)
