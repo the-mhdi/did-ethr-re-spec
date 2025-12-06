@@ -17,9 +17,10 @@ Based on our audit of the current ecosystem, we have identified several critical
 The method specific identifier is represented as the HEX-encoded secp256k1 public key (in compressed form), or the corresponding HEX-encoded Ethereum address on the target network, prefixed with 0x.
 
       ethr-did = "did:ethr:" ethr-specific-identifier
-      ethr-specific-identifier = [ ethr-blockchain ":" ethr-networkChainID ] ethereum-address / public-key-hex
-      ethr-blockchain = "eth" /"eip155" / "polygon" / "sonic" 
-      ethr-networkChainID = "main" / "sepolia" / "test" / "amoy"/ 1 / 137 
+      ethr-specific-identifier = [ ethr-blockchain ":" ethr-networkChainID or CAIP-2-ChainID ] ethereum-address / public-key-hex
+      ethr-blockchain = "eth" / "polygon" / "sonic" 
+      ethr-networkChainID = "main" / "sepolia" / "test" / "amoy"
+      CAIP-2-ChainID = "eip155:1" , "eip155:137", see CAIP-2 and CAIP-10 
       ethereum-address = "0x" 40*HEXDIG
       public-key-hex = "0x" 66*HEXDIG
 
